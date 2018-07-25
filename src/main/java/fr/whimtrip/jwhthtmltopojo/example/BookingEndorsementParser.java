@@ -24,8 +24,7 @@ public class BookingEndorsementParser {
 
         HtmlAdapter<BookingEndorsementPage> adapter = htmlToPojoEngine.adapter(BookingEndorsementPage.class);
 
-        BookingEndorsementPage bookingEndorsementPage =
-                adapter.fromHtml(getHtmlBody());
+        BookingEndorsementPage bookingEndorsementPage = adapter.fromHtml(getHtmlBody());
 
         System.out.println(bookingEndorsementPage);
 
