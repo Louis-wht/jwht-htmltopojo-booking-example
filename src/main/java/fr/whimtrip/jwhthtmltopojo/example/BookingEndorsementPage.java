@@ -1,5 +1,6 @@
 package fr.whimtrip.jwhthtmltopojo.example;
 
+import fr.whimtrip.ext.jwhthtmltopojo.annotation.AcceptObjectIf;
 import fr.whimtrip.ext.jwhthtmltopojo.annotation.Selector;
 
 import java.util.List;
@@ -25,6 +26,8 @@ public class BookingEndorsementPage {
     @Selector(
         value = ".js-equalize-heights > .dsf_cd_mod_hlist-item"
     )
+    // This will filter out all endorsements containing the term "city"
+    @AcceptObjectIf(BookingEndorsementFilter.class)
     private List<BookingEndorsement> bookingEndorsements;
 
 

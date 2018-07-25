@@ -3,7 +3,6 @@ package fr.whimtrip.jwhthtmltopojo.example;
 import fr.whimtrip.ext.jwhthtmltopojo.HtmlToPojoEngine;
 import fr.whimtrip.ext.jwhthtmltopojo.intrf.HtmlAdapter;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -15,7 +14,7 @@ import java.nio.file.Paths;
  * @author Louis-wht
  * @since 25/07/18
  */
-public class BookingEndorsmentParser {
+public class BookingEndorsementParser {
 
     private static final String ALESUND_NORWAY_ENDORSEMENT_HTML_FILE = "alesund-no-booking-endorsement.html";
 
@@ -33,8 +32,6 @@ public class BookingEndorsmentParser {
     }
 
     private static String getHtmlBody() throws IOException {
-
-        final File file = new File(ALESUND_NORWAY_ENDORSEMENT_HTML_FILE);
         byte[] encoded = Files.readAllBytes(Paths.get(ALESUND_NORWAY_ENDORSEMENT_HTML_FILE));
         return new String(encoded, Charset.forName("UTF-8"));
 
